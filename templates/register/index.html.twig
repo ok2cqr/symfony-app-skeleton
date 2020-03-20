@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    {% trans %}register.header.caption{% endtrans %}
+{% endblock %}
+{% block body %}
+    <section class="resume d-lg-flex justify-content-center align-items-center" id="resume">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col">
+                    <h1>{% trans %}register.header.caption{% endtrans %}</h1>
+                </div>
+            </div>
+            {{ form_start(form) }}
+            {{ form_errors(form) }}
+            <div class="row">
+                <div class="col-sm-2 offset-2">
+                    {% trans %}register.form.label.email{% endtrans %}
+                </div>
+                <div class="col-sm-7">
+                    {{ form_widget(form.email, {'attr': {'class' : 'form-control', 'autofocus' : true }}) }}
+                    {{ form_help(form.email) }}
+                </div>
+
+            </div>
+            {% if form_errors(form.email) %}
+                <div class="row">
+                    <div class="col-sm-10 offset-2 text-danger">
+                        {{ form_errors(form.email) }}
+                    </div>
+                </div>
+            {% endif %}
+            <div class="row pt-2">
+                <div class="col-sm-2 offset-2">
+                    {% trans %}register.form.label.full_name{% endtrans %}
+                </div>
+                <div class="col-sm-7">
+                    {{ form_widget(form.fullName, {'attr': {'class' : 'form-control'}}) }}
+                </div>
+            </div>
+            {% if form_errors(form.fullName) %}
+                <div class="row">
+                    <div class="col-sm-10 offset-2 text-danger">
+                        {{ form_errors(form.fullName) }}
+                    </div>
+                </div>
+            {% endif %}
+            <div class="row pt-2">
+                <div class="col-sm-2 offset-2">
+                    {% trans %}register.form.label.password{% endtrans %}
+                </div>
+                <div class="col-sm-7">
+                    {{ form_widget(form.password['first'], {'attr': {'class' : 'form-control'}}) }}
+                </div>
+            </div>
+            {% if form_errors(form.password['first']) %}
+                <div class="row">
+                    <div class="col-sm-10 offset-2 text-danger">
+                        {{ form_errors(form.password['first']) }}
+                    </div>
+                </div>
+            {% endif %}
+
+            <div class="row pt-2">
+                <div class="col-sm-2 offset-2">
+                    {% trans %}register.form.label.verify_the_password{% endtrans %}
+                </div>
+                <div class="col-sm-7">
+                    {{ form_widget(form.password['second'], {'attr': {'class' : 'form-control'}}) }}
+                </div>
+            </div>
+            {% if form_errors(form.password['second']) %}
+                <div class="row">
+                    <div class="col-sm-2 offset-2 text-danger">
+                        {{ form_errors(form.password['second']) }}
+                    </div>
+                </div>
+            {% endif %}
+
+            <div class="row pt-3">
+                <div class="col-sm-7 offset-4">
+                    {{ form_widget(form._token) }}
+                    {{ form_widget(form.register, {'attr': {'class' : 'btn btn-success'}}, {'label': 'register.form.button.register'|trans}) }}
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="Kd99AFq" resname="login.title">
+        <source>login.title</source>
+        <target>Log in</target>
+      </trans-unit>
+      <trans-unit id="jDk9TNa" resname="login.header.please_sign_in">
+        <source>login.header.please_sign_in</source>
+        <target>Please sign in</target>
+      </trans-unit>
+      <trans-unit id=".QaqFH3" resname="login.form.label.email_address">
+        <source>login.form.label.email_address</source>
+        <target>E-mail</target>
+      </trans-unit>
+      <trans-unit id="cWgDYrG" resname="login.form.placeholder.email_address">
+        <source>login.form.placeholder.email_address</source>
+        <target>E-mail address</target>
+      </trans-unit>
+      <trans-unit id="_nakZxD" resname="login.form.label.password">
+        <source>login.form.label.password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="bhoaqQf" resname="login.form.placeholder.password">
+        <source>login.form.placeholder.password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="hnDWsNr" resname="login.form.checkbox.remember_me">
+        <source>login.form.checkbox.remember_me</source>
+        <target>Remember me</target>
+      </trans-unit>
+      <trans-unit id="AIVqMT6" resname="login.form.button.sing_in">
+        <source>login.form.button.sing_in</source>
+        <target>Sign in</target>
+      </trans-unit>
+      <trans-unit id="g9WLhFc" resname="register.header.caption">
+        <source>register.header.caption</source>
+        <target>Register</target>
+      </trans-unit>
+      <trans-unit id="oHy4YRx" resname="register.form.label.email">
+        <source>register.form.label.email</source>
+        <target>E-mail:</target>
+      </trans-unit>
+      <trans-unit id="xsSqtZ6" resname="register.form.label.full_name">
+        <source>register.form.label.full_name</source>
+        <target>Full name</target>
+      </trans-unit>
+      <trans-unit id="MSx57Kx" resname="register.form.label.password">
+        <source>register.form.label.password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="gRqvWSy" resname="register.form.label.verify_the_password">
+        <source>register.form.label.verify_the_password</source>
+        <target>Verify the password</target>
+      </trans-unit>
+      <trans-unit id="KxOHUOe" resname="register.form.button.register">
+        <source>register.form.button.register</source>
+        <target>Register</target>
+      </trans-unit>
+      <trans-unit id="1slVsoT" resname="menu.register">
+        <source>menu.register</source>
+        <target>Register</target>
+      </trans-unit>
+      <trans-unit id="tpQZiRL" resname="menu.log_in">
+        <source>menu.log_in</source>
+        <target>Log in</target>
+      </trans-unit>
+      <trans-unit id="wBTFKFR" resname="menu.logout">
+        <source>menu.logout</source>
+        <target>Logout</target>
+      </trans-unit>
+      <trans-unit id="GyNiJAi" resname="menu.home">
+        <source>menu.home</source>
+        <target>Home</target>
+      </trans-unit>
+      <trans-unit id="f8uXqsh" resname="register.form.error.email_already_exists">
+        <source>register.form.error.email_already_exists</source>
+        <target>User with this email already exists</target>
+      </trans-unit>
+      <trans-unit id="_SbCetS" resname="register.form.success">
+        <source>register.form.success</source>
+        <target>You have successfully registered</target>
+      </trans-unit>
+      <trans-unit id="zsW6FTl" resname="login.form.button.forget_password">
+        <source>login.form.button.forget_password</source>
+        <target>Forget password?</target>
+      </trans-unit>
+      <trans-unit id="ybcrpQu" resname="lostPassword.form.error.email_does_not_exist">
+        <source>lostPassword.form.error.email_does_not_exist</source>
+        <target>E-mail does not exist, please register first</target>
+      </trans-unit>
+      <trans-unit id="BJnAh05" resname="lostPassword.header.caption">
+        <source>lostPassword.header.caption</source>
+        <target>Lost password</target>
+      </trans-unit>
+      <trans-unit id="l3tP1hZ" resname="lostPassword.form.label.email">
+        <source>lostPassword.form.label.email</source>
+        <target>E-mail</target>
+      </trans-unit>
+      <trans-unit id="igAKMQ." resname="lostPassword.form.button.reset">
+        <source>lostPassword.form.button.reset</source>
+        <target>Reset password</target>
+      </trans-unit>
+      <trans-unit id="FkWlbak" resname="lostPassword.email.subject">
+        <source>lostPassword.email.subject</source>
+        <target>Password reset</target>
+      </trans-unit>
+      <trans-unit id="40umVa7" resname="lostPassword.email.hello">
+        <source>lostPassword.email.hello</source>
+        <target>Hello</target>
+      </trans-unit>
+      <trans-unit id="yGMkTvB" resname="lostPassword.email.content">
+        <source>lostPassword.email.content</source>
+        <target>there is the password reset link. Please click on it and set a new password. The link will be valid for 1 hour.</target>
+      </trans-unit>
+      <trans-unit id="UymEXr5" resname="lostPassword.form.success">
+        <source>lostPassword.form.success</source>
+        <target>E-mail with password reset link has been sent successfully</target>
+      </trans-unit>
+      <trans-unit id="MiqhU6h" resname="newPassword.form.hash_not_found">
+        <source>newPassword.form.hash_not_found</source>
+        <target>Password link expired or does not exist</target>
+      </trans-unit>
+      <trans-unit id="XmhI8TN" resname="newPassword.form.password_changed">
+        <source>newPassword.form.password_changed</source>
+        <target>Password has been changed</target>
+      </trans-unit>
+      <trans-unit id="oBUXUXT" resname="newPassword.header.caption">
+        <source>newPassword.header.caption</source>
+        <target>Set new password</target>
+      </trans-unit>
+      <trans-unit id="JlZKrjH" resname="newPassword.form.label.password">
+        <source>newPassword.form.label.password</source>
+        <target>New password</target>
+      </trans-unit>
+      <trans-unit id="Uxm90j0" resname="newPassword.form.label.verify_the_password">
+        <source>newPassword.form.label.verify_the_password</source>
+        <target>Verify the password</target>
+      </trans-unit>
+      <trans-unit id="4pI7V3E" resname="newPassword.form.label.email">
+        <source>newPassword.form.label.email</source>
+        <target>Enter your e-mail</target>
+      </trans-unit>
+      <trans-unit id=".qPaiOJ" resname="newPassword.button.back_to_login">
+        <source>newPassword.button.back_to_login</source>
+        <target>Back to login page</target>
+      </trans-unit>
+      <trans-unit id="IKT6hYo" resname="newPassword.form.button.change_password">
+        <source>newPassword.form.button.change_password</source>
+        <target>Reset the password</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

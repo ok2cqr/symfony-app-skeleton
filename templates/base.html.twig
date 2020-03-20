@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+    </head>
+    <body class="{% block bodyClass %}{% endblock %}">
+        {% include "menu.html.twig" %}
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    {% for flashKey in app.session.flashBag.keys %}
+                        <div class="alert alert-block flash-container alert-{{ flashKey }}">
+                            {% for flash in app.session.flashBag.get(flashKey) %}
+                                <pp class="text-center">
+                                    {{ flash|trans|raw }}
+                                </pp>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <main role="main" class="container">
+            <div class="container">
+                {% block body %}
+
+                {% endblock %}
+            </div>
+        </main>
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </body>
+</html>

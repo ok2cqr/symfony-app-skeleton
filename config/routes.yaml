@@ -1,0 +1,29 @@
+index:
+    path: /{_locale<%app.supported_locales%>}
+    controller: App\Controller\FrontendController::index
+
+app_register:
+    path: /{_locale<%app.supported_locales%>}/register
+    controller: App\Controller\RegisterController:index
+app_login:
+    path: /{_locale<%app.supported_locales%>}/login
+    controller: App\Controller\SecurityController::login
+app_logout:
+    path: /logout
+    controller: App\Controller\SecurityController::logout
+app_lost_password:
+    path: /{_locale<%app.supported_locales%>}/lost-password
+    controller: App\Controller\SecurityController::lostPassword
+app_new_password:
+    path: /{_locale<%app.supported_locales%>}/new-password/{hash}
+    controller: App\Controller\SecurityController::newPassword
+    requirements:
+        hash: .+
+
+main:
+    path: /{_locale<%app.supported_locales%>}/qso
+    controller: App\Controller\MainController::index
+
+no_lang:
+    path: /
+    controller: App\Controller\FrontendController::indexNoLocale

@@ -1,0 +1,8 @@
+includes:
+    - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+parameters:
+    checkMissingIterableValueType: false
+    doctrine:
+        objectManagerLoader: phpstan/doctrine-orm-bootstrap.php
+    autoload_directories:
+        - src/Migrations

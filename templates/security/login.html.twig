@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {% trans %}login.title{% endtrans %}
+{% endblock %}
+
+{% block bodyClass %}{% endblock %}
+
+{% block body %}
+    <div class="text-center">
+        {% if error %}
+            <div class="row">
+                <div class="col">
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if app.user %}
+        <div class="row">
+            <div class="col">
+                <div class="mb-3">
+                    You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        <div class="row">
+            <div class="col">
+                <form class="form-signin" method="post">
+                    <img class="mb-4" src="{{ asset('/images/logo-512x512.png')}}" alt="" width="144" height="144">
+                    <h1 class="h3 mb-3 font-weight-normal">{% trans %}login.header.please_sign_in{% endtrans %}</h1>
+                    <label for="inputEmail" class="sr-only">{% trans %}login.form.label.email_address{% endtrans %}</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="{% trans %}login.form.placeholder.email_address{% endtrans %}" required autofocus name="email">
+                    <label for="inputPassword" class="sr-only">{% trans %}login.form.label.password{% endtrans %}</label>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="{% trans %}login.form.placeholder.password{% endtrans %}" required name="password">
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" value="remember-me">{% trans %}login.form.checkbox.remember_me{% endtrans %}
+                        </label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">{% trans %}login.form.button.sing_in{% endtrans %}</button>
+                    <a href="{{ path('app_lost_password') }}" class="btn btn-lg btn-danger btn-block mt-5">{% trans %}login.form.button.forget_password{% endtrans %}</a>
+                    <p class="mt-5 mb-3 text-muted">&copy; 2018-{{ "now"|date('Y') }}</p>
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                </form>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
