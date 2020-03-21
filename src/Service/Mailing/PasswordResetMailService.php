@@ -1,14 +1,14 @@
 <?php
 declare(strict_types = 1);
 
-namespace App\Service;
+namespace App\Service\Mailing;
 
 use Symfony\Bridge\Twig\Mime\NotificationEmail;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
-class MailingService
+class PasswordResetMailService
 {
     private string $adminEmail;
 

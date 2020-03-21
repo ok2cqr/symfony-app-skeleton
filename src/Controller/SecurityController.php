@@ -8,7 +8,7 @@ use App\DataRequest\NewPasswordDataRequest;
 use App\Form\LostPasswordFormType;
 use App\Form\NewPasswordFormType;
 use App\Repository\UserRepository;
-use App\Service\MailingService;
+use App\Service\Mailing\PasswordResetMailService;
 use DateTimeImmutable;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\FormError;
@@ -25,7 +25,7 @@ class SecurityController extends AbstractController
 
     private TranslatorInterface $translator;
 
-    private MailingService $mailingService;
+    private PasswordResetMailService $passwordResetMailService;
 
     private UserPasswordEncoderInterface $userPasswordEncoder;
 
@@ -33,18 +33,18 @@ class SecurityController extends AbstractController
      * SecurityController constructor.
      * @param UserRepository $userRepository
      * @param TranslatorInterface $translator
-     * @param MailingService $mailingService
+     * @param PasswordResetMailService $passwordResetMailService
      * @param UserPasswordEncoderInterface $userPasswordEncoder
      */
     public function __construct(
         UserRepository $userRepository,
         TranslatorInterface $translator,
-        MailingService $mailingService,
+        PasswordResetMailService $passwordResetMailService,
         UserPasswordEncoderInterface $userPasswordEncoder
     ) {
         $this->userRepository = $userRepository;
         $this->translator = $translator;
-        $this->mailingService = $mailingService;
+        $this->passwordResetMailService = $passwordResetMailService;
         $this->userPasswordEncoder = $userPasswordEncoder;
     }
 
@@ -97,7 +97,7 @@ class SecurityController extends AbstractController
                 $hash = $this->getPasswordResetHash();
                 $validTo = (new DateTimeImmutable)->modify('+2 hours');
                 $this->userRepository->updatePasswordResetHash($user, $hash, $validTo);
-                $this->mailingService->sendPasswordResetEmail($lostPasswordDataRequest->email, $hash);
+                $this->passwordResetMailService->sendPasswordResetEmail($lostPasswordDataRequest->email, $hash);
                 $this->addFlash('success', $this->translator->trans('lostPassword.form.success'));
             }
         }
