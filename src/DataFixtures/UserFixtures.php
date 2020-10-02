@@ -33,6 +33,7 @@ class UserFixtures extends Fixture
         $user->setEmail("petr@ok2cqr.com");
         $user->setFullName("Petr Hložek");
         $user->setPassword($this->passwordEncoder->encodePassword($user, self::PASSWORD));
+        $user->setRoles(['ROLE_USER']);
         $manager->persist($user);
 
         $manager->flush();
