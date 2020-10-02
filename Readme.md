@@ -1,4 +1,4 @@
-# Symfony 5.0.x app skeleton
+# Symfony 5.1.x app skeleton
 
 It includes user registration, login and password reset function.
 
