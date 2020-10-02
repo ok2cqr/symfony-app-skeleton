@@ -153,6 +153,10 @@
         <source>lostPassword.email.content</source>
         <target>posílám odkaz na změnu hesla. Odkaz bude platný po dobu jedné hodiny.</target>
       </trans-unit>
+      <trans-unit id="0nsl9WK" resname="lostPassword.form.register.info">
+        <source>lostPassword.form.register.info</source>
+        <target>Jste nový uživatel? Zaregistrujte se, prosím.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

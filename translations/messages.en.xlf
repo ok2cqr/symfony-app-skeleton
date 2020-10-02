@@ -79,7 +79,7 @@
       </trans-unit>
       <trans-unit id="f8uXqsh" resname="register.form.error.email_already_exists">
         <source>register.form.error.email_already_exists</source>
-        <target>User with this email already exists</target>
+        <target>User with this e-mail already exists</target>
       </trans-unit>
       <trans-unit id="_SbCetS" resname="register.form.success">
         <source>register.form.success</source>
@@ -91,7 +91,7 @@
       </trans-unit>
       <trans-unit id="ybcrpQu" resname="lostPassword.form.error.email_does_not_exist">
         <source>lostPassword.form.error.email_does_not_exist</source>
-        <target>E-mail does not exist, please register first</target>
+        <target>E-mail does not exist, please register first.</target>
       </trans-unit>
       <trans-unit id="BJnAh05" resname="lostPassword.header.caption">
         <source>lostPassword.header.caption</source>
@@ -152,6 +152,10 @@
       <trans-unit id="IKT6hYo" resname="newPassword.form.button.change_password">
         <source>newPassword.form.button.change_password</source>
         <target>Reset the password</target>
+      </trans-unit>
+      <trans-unit id="0nsl9WK" resname="lostPassword.form.register.info">
+        <source>lostPassword.form.register.info</source>
+        <target>Are you a new member? Please register.</target>
       </trans-unit>
     </body>
   </file>
