@@ -38,6 +38,10 @@ class RegisterController extends AbstractController
         $this->translator = $translator;
     }
 
+    /**
+     * @param Request $request
+     * @return Response
+     */
     public function index(Request $request): Response
     {
         $userRegisterDataRequest = new UserRegisterDataRequest();

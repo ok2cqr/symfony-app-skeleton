@@ -20,10 +20,6 @@ app_new_password:
     requirements:
         hash: .+
 
-main:
-    path: /{_locale<%app.supported_locales%>}/qso
-    controller: App\Controller\MainController::index
-
 no_lang:
     path: /
     controller: App\Controller\FrontendController::indexNoLocale

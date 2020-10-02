@@ -9,7 +9,9 @@ use Symfony\Component\HttpFoundation\Response;
 
 class FrontendController extends AbstractController
 {
-
+    /**
+     * @return Response
+     */
     public function index(): Response
     {
         return $this->render('frontend/index.html.twig', [
@@ -17,6 +19,9 @@ class FrontendController extends AbstractController
         ]);
     }
 
+    /**
+     * @return RedirectResponse
+     */
     public function indexNoLocale(): RedirectResponse
     {
         return $this->redirectToRoute('index', [

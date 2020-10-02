@@ -10,6 +10,7 @@ use App\Form\NewPasswordFormType;
 use App\Repository\UserRepository;
 use App\Service\Mailing\PasswordResetMailService;
 use DateTimeImmutable;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\FormError;
 use Symfony\Component\HttpFoundation\Request;
@@ -54,11 +55,10 @@ class SecurityController extends AbstractController
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
-//         if ($this->getUser()) {
-//             return $this->redirectToRoute('main');
-//         }
+         if ($this->getUser()) {
+             return $this->redirectToRoute('main');
+         }
 
-        // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
         $lastUsername = $authenticationUtils->getLastUsername();
 
@@ -69,18 +69,18 @@ class SecurityController extends AbstractController
     }
 
     /**
-     * @throws \Exception
+     * @throws Exception
      */
     public function logout(): void
     {
-        throw new \Exception('This method can be blank - it will be intercepted by the logout key on your firewall');
+        throw new Exception('This method can be blank - it will be intercepted by the logout key on your firewall');
     }
 
     /**
      * @param Request $request
      * @return Response
      * @throws TransportExceptionInterface
-     * @throws \Exception
+     * @throws Exception
      */
     public function lostPassword(Request $request): Response
     {
@@ -109,7 +109,7 @@ class SecurityController extends AbstractController
 
     /**
      * @return string
-     * @throws \Exception
+     * @throws Exception
      */
     private function getPasswordResetHash(): string
     {
@@ -120,7 +120,7 @@ class SecurityController extends AbstractController
      * @param Request $request
      * @param string $hash
      * @return Response
-     * @throws \Exception
+     * @throws Exception
      */
     public function newPassword(Request $request, string $hash): Response
     {
