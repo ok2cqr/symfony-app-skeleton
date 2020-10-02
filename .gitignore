@@ -28,3 +28,5 @@ yarn-error.log
 ###< squizlabs/php_codesniffer ###
 
 .idea
+
+src/.preload.php
